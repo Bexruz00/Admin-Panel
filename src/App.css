@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@font-face {
+  font-display: swap;
+  font-family: "Livvic";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/livvic-v14-latin-regular.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Livvic";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./assets/fonts/livvic-v14-latin-500.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Livvic";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./assets/fonts/livvic-v14-latin-700.woff2") format("woff2");
+}
+
+:root {
+  --color-main: #bc8e5b;
+}
+
+body {
+  font-family: "livvic", sans-serif;
+  background-color: #f1f0ee;
+}
+.main-color,
+.ant-spin-dot-holder {
+  color: var(--color-main) !important;
+}
+.ant-input-outlined :focus-within {
+  box-shadow: 0 0 0 2px #bc8f5b42;
+}
+.ant-btn-primary,
+.ant-menu-item-selected {
+  background-color: var(--color-main) !important;
+}
+.ant-input-affix-wrapper:hover {
+  border-color: var(--color-main) !important;
+}
+.ant-input-affix-wrapper-focused,
+.ant-input:hover,
+.ant-input:focus,
+.ant-select-selector:hover,
+.ant-select-selector:focus {
+  border-color: var(--color-main) !important;
+}
+
+.ant-btn:hover {
+  color: var(--color-main) !important;
+  border-color: var(--color-main) !important;
+}
+.ant-btn-primary:hover {
+  color: white !important;
+  opacity: 80% !important;
+}
+a {
+  font-family: "Livvic", sans-serif;
+}
+.main-logo {
+  animation-name: logo;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes logo {
+  0% {
+    transform: scale(2) rotateY();
+  }
+  100% {
+    transform: scale(3.5) rotateY(180deg);
+  }
+}
+
+.ant-pagination-item-active {
+  border-color: var(--color-main) !important;
+  color: var(--color-main) !important;
+}
+.ant-pagination-item-active > a {
+  color: var(--color-main) !important;
+}
+
+.ant-input-outlined:focus-within {
+  box-shadow: 0 0 0 2px #dead7633 !important;
+}

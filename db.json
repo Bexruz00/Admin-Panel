@@ -1,0 +1,252 @@
+{
+  "users": [
+    {
+      "username": "Bexruz",
+      "password": "123",
+      "id": "2c74"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "path": "/",
+      "title": "Asosiy"
+    },
+    {
+      "id": "2",
+      "path": "",
+      "title": "Ustozlar"
+    },
+    {
+      "id": "3",
+      "path": "/students",
+      "title": "O'quvchilar"
+    },
+    {
+      "id": "4",
+      "path": "/market",
+      "title": "Do'kon"
+    },
+    {
+      "id": "5",
+      "path": "/groups",
+      "title": "Guruhlar"
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Bexruz",
+      "surname": "Barnoyev",
+      "age": 18,
+      "stackId": "1",
+      "stack": "Frontend",
+      "region": "Buxoro",
+      "regionId": "10",
+      "district": "Kogon",
+      "status": "Asosiy teacher",
+      "statusId": "2",
+      "experience": "2 yil",
+      "gender": "Erkak",
+      "email": "bexruz@gmail.com",
+      "phone": "+998938744408",
+      "isMarried": "Yo'q",
+      "workCompanyId": [
+        "3",
+        "2",
+        "1"
+      ],
+      "workCompany": [
+        "TikTok",
+        "Facebook",
+        "Google"
+      ],
+      "study": "TDTU",
+      "id": "1"
+    }
+  ],
+  "stack": [
+    {
+      "id": "1",
+      "name": "Frontend",
+      "image": "https://funix.edu.vn/wp-content/uploads/2022/02/Frontend-Developer.jpeg"
+    },
+    {
+      "id": "2",
+      "name": "Backend",
+      "image": "https://media.gettyimages.com/id/1422276740/vector/software-developer-flat-design.jpg?s=612x612&w=gi&k=20&c=nAeiHldWvLHV-S4CRv5BsRtwH2PlS7t7Dynol9npglE="
+    },
+    {
+      "id": "3",
+      "name": "Full Stack",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPV0S6QPMqXN7rCVsTPsQzKSWcb2mpBU6Z4Q&s"
+    },
+    {
+      "id": "4",
+      "name": "Graphic design",
+      "image": "https://inspiria.edu.in/wp-content/uploads/Career-in.-graphic-designers.webp"
+    },
+    {
+      "id": "5",
+      "name": "Flutter",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJzpEkv-vlwrVppb-PQuWArI1sXR9vAYAwNg&s"
+    },
+    {
+      "id": "6",
+      "name": "Java",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIyYYAhEoXWOcyx0sjHiaK2TrmUNxxMJdE6g&s"
+    },
+    {
+      "id": "7",
+      "name": "Foundation",
+      "image": "https://www.champstreet.com/blog/wp-content/uploads/2018/11/foundation-course.jpg"
+    }
+  ],
+  "groups": [
+    {
+      "id": "1",
+      "stackId": "1",
+      "name": "React JS N77",
+      "createdAt": "03.08.2024",
+      "studentCount": "8",
+      "status": true,
+      "mainTeacher": "Nurillo Suyunboyev",
+      "teacherId": "1",
+      "supportTeacher": "Isroil Omonjonov",
+      "room": "Facebook"
+    },
+    {
+      "id": "2",
+      "stackId": "2",
+      "name": "Backend NodeJS N76",
+      "createdAt": "03.08.2024",
+      "studentCount": "18",
+      "status": false,
+      "mainTeacher": "Valijon Quvondiqov",
+      "teacherId": "bc99",
+      "supportTeacher": "Isroil Omonjonov",
+      "room": "Tesla"
+    },
+    {
+      "id": "3",
+      "stackId": "2",
+      "name": "Backend Java N2",
+      "createdAt": "01.02.2024",
+      "studentCount": "20",
+      "status": true,
+      "mainTeacher": "Hondamir Usmonov",
+      "teacherId": "f2b9",
+      "supportTeacher": "Ibrohimjon Sadriddinov",
+      "room": "Instagram"
+    }
+  ],
+  "regions": [
+    {
+      "id": "1",
+      "name": "Toshkent"
+    },
+    {
+      "id": "2",
+      "name": "Fargona"
+    },
+    {
+      "id": "3",
+      "name": "Namangan"
+    },
+    {
+      "id": "4",
+      "name": "Andijon"
+    },
+    {
+      "id": "5",
+      "name": "Sirdaryo"
+    },
+    {
+      "id": "6",
+      "name": "Jizzax"
+    },
+    {
+      "id": "7",
+      "name": "Samarqand"
+    },
+    {
+      "id": "8",
+      "name": "Qashqadaryo"
+    },
+    {
+      "id": "9",
+      "name": "Surxandaryo"
+    },
+    {
+      "id": "10",
+      "name": "Buxoro"
+    },
+    {
+      "id": "11",
+      "name": "Xorazm"
+    },
+    {
+      "id": "12",
+      "name": "Navoi"
+    }
+  ],
+  "status": [
+    {
+      "id": "1",
+      "name": "Yordamchi ustoz"
+    },
+    {
+      "id": "2",
+      "name": "Asosiy ustoz"
+    },
+    {
+      "id": "3",
+      "name": "Bosh ustoz"
+    },
+    {
+      "id": "4",
+      "name": "Boshqaruvchi ustoz"
+    }
+  ],
+  "workList": [
+    {
+      "id": "1",
+      "name": "Google"
+    },
+    {
+      "id": "2",
+      "name": "Facebook"
+    },
+    {
+      "id": "3",
+      "name": "TikTok"
+    },
+    {
+      "id": "4",
+      "name": "OpenAI"
+    },
+    {
+      "id": "5",
+      "name": "Telegram"
+    },
+    {
+      "id": "6",
+      "name": "Tesla"
+    },
+    {
+      "id": "7",
+      "name": "Apple"
+    },
+    {
+      "id": "8",
+      "name": "Microsoft"
+    },
+    {
+      "id": "9",
+      "name": "Najot Ta'lim"
+    },
+    {
+      "id": "10",
+      "name": "Kahoot"
+    }
+  ]
+}
