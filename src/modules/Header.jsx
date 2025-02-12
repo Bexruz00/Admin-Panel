@@ -32,7 +32,7 @@ const Header = () => {
                 <Tooltip placement='bottom' title={"Oxirgi ma'lumot yangilanish vaqti: 8 Fev, 2025 15:00"}>
                     <Button size='middle' icon={<InfoCircleOutlined/>} iconPosition='left' type='default' >Sinxronlash</Button>
                 </Tooltip>
-                <Badge count={5} color='red' size='default'>
+                <Badge count={7} color='red' size='default'>
                      <Button size='middle' icon={<BellOutlined />} iconPosition='left' type='default' ></Button>
                 </Badge>
                 <button onClick={() => setLogOut(true)} className='flex items-center justify-between gap-2 cursor-pointer'>

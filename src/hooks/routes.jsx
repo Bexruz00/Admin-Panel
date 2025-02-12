@@ -1,6 +1,18 @@
 import React from "react";
 import { PATH } from "../hooks/path";
-import { Groups, Home, Market, Students, Teachers } from "../pages/Dashboard";
+import {
+  Home,
+  Market,
+  Students,
+  Teachers,
+  TeachersCrud,
+  TeachersMore,
+  Group,
+  GroupCrud,
+  SingleGroup,
+  StudentsCrud,
+  StudentMore,
+} from "../pages/Dashboard";
 import {
   CodeSandboxOutlined,
   HomeOutlined,
@@ -8,8 +20,8 @@ import {
   UserOutlined,
   UsergroupAddOutlined,
 } from "@ant-design/icons";
-import TeachersCrud from "../pages/Dashboard/teachersCrud";
-import TeachersMore from "../pages/Dashboard/teachersMore";
+import StackCrud from "../pages/Dashboard/Stack/StackCrud";
+import Stack from "../pages/Dashboard/Stack/Stack";
 
 export const dashboardNavList = [
   {
@@ -35,9 +47,9 @@ export const dashboardNavList = [
   },
   {
     id: 4,
-    path: PATH.groups,
-    element: <Groups />,
-    title: "Guruhlar",
+    path: PATH.stack,
+    element: <Stack />,
+    title: "Yo'nalishlar",
     icon: <CodeSandboxOutlined className="!text-[22px]" />,
   },
   {
@@ -67,8 +79,8 @@ export const DashboardRoutesList = [
   },
   {
     id: 4,
-    path: PATH.groups,
-    element: <Groups />,
+    path: PATH.stack,
+    element: <Stack />,
   },
   {
     id: 5,
@@ -89,5 +101,50 @@ export const DashboardRoutesList = [
     id: 8,
     path: PATH.teachersEdit,
     element: <TeachersCrud />,
+  },
+  {
+    id: 9,
+    path: PATH.groups,
+    element: <Group />,
+  },
+  {
+    id: 10,
+    path: PATH.groupAdd,
+    element: <GroupCrud />,
+  },
+  {
+    id: 11,
+    path: PATH.groupEdit,
+    element: <GroupCrud />,
+  },
+  {
+    id: 12,
+    path: PATH.groupMore,
+    element: <SingleGroup />,
+  },
+  {
+    id: 13,
+    path: PATH.stackAdd,
+    element: <StackCrud />,
+  },
+  {
+    id: 14,
+    path: PATH.stackEdit,
+    element: <StackCrud />,
+  },
+  {
+    id: 15,
+    path: PATH.studentsAdd,
+    element: <StudentsCrud />,
+  },
+  {
+    id: 16,
+    path: PATH.studentsEdit,
+    element: <StudentsCrud />,
+  },
+  {
+    id: 17,
+    path: PATH.studentsMore,
+    element: <StudentMore />,
   },
 ];

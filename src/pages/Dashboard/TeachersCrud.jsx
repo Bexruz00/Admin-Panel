@@ -202,7 +202,7 @@ const TeachersCrud = () => {
             optionFilterProp="label"
             options={[
               { label: "Erkak", value: "Erkak" },
-              { label: "Ayol", value: "Ayol" }
+              { label: "Ayol", value: "Ayol" },
             ]}
           />
           <Input

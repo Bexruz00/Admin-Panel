@@ -3,7 +3,7 @@ import Caption from "../../components/Caption";
 import { UserAddOutlined } from "@ant-design/icons";
 import { Input } from "antd";
 import CustomTable from "../../components/CustomTable";
-import {PATH} from "../../hooks/path"
+import { PATH } from "../../hooks/path";
 import FilterCustom from "../../components/FilterCustom";
 import { getTeachers } from "../../service/getTeachers";
 
@@ -47,14 +47,15 @@ const Teachers = () => {
   // Search Part
   function handleSearchByName(e) {
     setIsLoading(true);
-    const filterByName = teachers.filter((item) => item.name.toLowerCase().includes(e.target.value.toLowerCase()));
+    const filterByName = teachers.filter((item) =>
+      item.name.toLowerCase().includes(e.target.value.toLowerCase())
+    );
     if (e.target.value) {
       setTimeout(() => {
         setIsLoading(false);
         setTeachers(filterByName);
       }, 1000);
-    } 
-    else {
+    } else {
       setTimeout(() => {
         setIsLoading(false);
         setRefresh(!refresh);
@@ -62,19 +63,38 @@ const Teachers = () => {
     }
   }
 
-  getTeachers(stackId, refresh, setTeachers, teachers)
+  getTeachers(stackId, refresh, setTeachers, teachers);
 
   return (
     <div className="p-5">
-      <Caption addLink={PATH.teachersAdd} title={"Ustozlar"} icon={<UserAddOutlined />} count={2} />
+      <Caption
+        addLink={PATH.teachersAdd}
+        title={"Ustozlar"}
+        icon={<UserAddOutlined />}
+        count={teachers.length}
+      />
       <div className="mt-5 flex gap-10">
         <label className="flex flex-col">
           <span className="text-[15px] text-slate-400 pl-1 mb-1">Qidirish</span>
-          <Input onChange={handleSearchByName} className="!w-[350px]" size="large" allowClear placeholder="Qidirish..."/>
+          <Input
+            onChange={handleSearchByName}
+            className="!w-[350px]"
+            size="large"
+            allowClear
+            placeholder="Qidirish..."
+          />
         </label>
         <label className="flex flex-col">
-          <span className="text-[15px] text-slate-400 pl-1 mb-1"> Choose stack </span>
-          <FilterCustom API={"/stack"} filterId={stackId} setFilterId={setStackId} placeholder={"Yo'nalish tanlang"} />
+          <span className="text-[15px] text-slate-400 pl-1 mb-1">
+            {" "}
+            Choose stack{" "}
+          </span>
+          <FilterCustom
+            API={"/stack"}
+            filterId={stackId}
+            setFilterId={setStackId}
+            placeholder={"Yo'nalish tanlang"}
+          />
         </label>
       </div>
       <div className="mt-5">

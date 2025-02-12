@@ -2,16 +2,34 @@ import {
   ArrowLeftOutlined,
   DeleteOutlined,
   EditOutlined,
+  PhoneFilled,
 } from "@ant-design/icons";
-import { Button } from "antd";
-import React from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Button, Modal } from "antd";
+import React, { useState } from "react";
+import MoreItem from "../../components/MoreItem";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import getRequest from "../../service/getRequest";
+import { deleteUser } from "../../service/delete";
+import toast from "react-hot-toast";
 
 const TeachersMore = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const singleData = getRequest(`/teachers/${id}`, true);
+
+  const [deleteLoading, setDeleteLoading] = useState(false);
+  const [deleteModal, setDeleteModal] = useState(false);
+
+  function handleRemoveTeacher() {
+    setDeleteLoading(true);
+    deleteUser(
+      `/teachers/${id}`,
+      setDeleteLoading,
+      setDeleteModal,
+      navigate,
+      toast
+    );
+  }
 
   return (
     <div className="p-5">
@@ -22,12 +40,25 @@ const TeachersMore = () => {
             type="button"
             onClick={() => navigate(-1)}
           >
+            {" "}
             <ArrowLeftOutlined className="text-[25px]" />
           </button>
-          <h2 className="font-bold text-[25px]">{singleData?.name}</h2>
+          <h2 className="font-bold text-[25px]">
+            {singleData?.name} {singleData.surname} | #{singleData.id}
+          </h2>
         </div>
         <div className="flex items-center gap-[10px]">
-          <Button className="!bg-red-700" type="primary" size="large">
+          <Link to={`tel:${singleData.phone}`}>
+            <Button className="!bg-green-500" type="primary" size="large">
+              <PhoneFilled className="text-[22px]" />
+            </Button>
+          </Link>
+          <Button
+            onClick={() => setDeleteModal(true)}
+            className="!bg-red-700"
+            type="primary"
+            size="large"
+          >
             {" "}
             <DeleteOutlined className="text-[22px]" />
           </Button>
@@ -42,6 +73,38 @@ const TeachersMore = () => {
           </Button>
         </div>
       </div>
+      <div className="flex justify-between mt-10">
+        <ul className="p-5 space-y-2 rounded-md border-[2px] border-slate-400 w-[45%]">
+          <MoreItem title={"Stack nomi"} value={singleData.stack} />
+          <MoreItem title={"Maqom"} value={singleData.status} />
+          <MoreItem title={"Tajribasi"} value={singleData.experience} />
+          <MoreItem title={"Email manzil"} value={singleData.email} />
+          <MoreItem title={"Oqish manzili"} value={singleData.study} />
+        </ul>
+        <ul className="p-5 space-y-2 rounded-md border-[2px] border-slate-400 w-[45%]">
+          <MoreItem title={"Yashash manzili"} value={singleData.region} />
+          <MoreItem title={"Tuman nomi"} value={singleData.district} />
+          <MoreItem title={"Turmush"} value={singleData.isMerried} />
+          <MoreItem title={"Jinsi"} value={singleData.gender} />
+          <li className="flex flex-col">
+            <span className="text-slate-400 text-[15px]">Ish joyi</span>
+            <div className="flex mt-1 space-x-2">
+              {singleData?.workCompany?.map((item, index) => (
+                <Button key={index}>{item}</Button>
+              ))}
+            </div>
+          </li>
+        </ul>
+      </div>
+      <Modal
+        confirmLoading={deleteLoading}
+        open={deleteModal}
+        onCancel={() => setDeleteModal(false)}
+        onOk={handleRemoveTeacher}
+        title="Ustozni o'chirmoqchimisiz"
+      >
+        {" "}
+      </Modal>
     </div>
   );
 };

@@ -1,14 +1,28 @@
-import { useEffect, useState } from "react";
-import { instance } from "../hooks/instance";
+// import { useEffect, useState } from "react";
+// import { instance } from "../hooks/instance";
+
+// const getRequest = (api, isObj) => {
+//   const [data, setData] = useState(isObj ? [] : []);
+
+//   useEffect(() => {
+//     instance().get(api).then((res) => setData(res.data));
+//   }, []);
+
+//   return data;
+// };
+
+// export default getRequest;
+import { useEffect, useState } from 'react'
+import { instance } from '../hooks/instance'
 
 const getRequest = (api, isObj) => {
-  const [data, setData] = useState(isObj ? [] : []);
+    const [data, setData] = useState(isObj ? {} : [])
 
-  useEffect(() => {
-    instance().get(api).then((res) => setData(res.data));
-  }, []);
+    useEffect(() => {
+        instance().get(api).then(res => setData(res.data))
+    }, [])
 
-  return data;
-};
+    return data
+}
 
-export default getRequest;
+export default getRequest

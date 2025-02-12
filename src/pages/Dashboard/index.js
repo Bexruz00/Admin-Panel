@@ -1,6 +1,24 @@
 import Home from "../Dashboard/Home";
-import Groups from "../Dashboard/Groups";
+import Group from "./Group/Group";
 import Market from "../Dashboard/Market";
-import Students from "../Dashboard/Students";
-import Teachers from "../Dashboard/Teachers";
-export { Home, Groups, Market, Students, Teachers };
+import Students from "./Students/Students";
+import Teachers from "../Dashboard/teachers";
+import StudentsCrud from "./Students/StudentsCrud";
+import StudentMore from "./Students/StudentMore";
+import TeachersCrud from "./teachersCrud";
+import TeachersMore from "./teachersMore";
+import GroupCrud from "./Group/GroupCrud";
+import SingleGroup from "./Group/SingleGroup";
+export {
+  Home,
+  Group,
+  Market,
+  Students,
+  Teachers,
+  StudentsCrud,
+  StudentMore,
+  TeachersCrud,
+  TeachersMore,
+  GroupCrud,
+  SingleGroup,
+};

@@ -117,25 +117,13 @@
     {
       "id": "2",
       "stackId": "2",
-      "name": "Backend NodeJS N76",
+      "name": "Backend NodeJS N74",
       "createdAt": "03.08.2024",
       "studentCount": "18",
       "status": false,
-      "mainTeacher": "Valijon Quvondiqov",
+      "mainTeacher": "Sulaymon Qodirov",
       "teacherId": "bc99",
       "supportTeacher": "Isroil Omonjonov",
-      "room": "Tesla"
-    },
-    {
-      "id": "3",
-      "stackId": "2",
-      "name": "Backend Java N2",
-      "createdAt": "01.02.2024",
-      "studentCount": "20",
-      "status": true,
-      "mainTeacher": "Hondamir Usmonov",
-      "teacherId": "f2b9",
-      "supportTeacher": "Ibrohimjon Sadriddinov",
       "room": "Instagram"
     }
   ],
@@ -247,6 +235,60 @@
     {
       "id": "10",
       "name": "Kahoot"
+    }
+  ],
+  "students": [
+    {
+      "id": "1",
+      "studentId": "171819",
+      "name": "Ali",
+      "groupId": "1",
+      "group": "React JS N77",
+      "stackId": "1",
+      "surname": "Valiyev",
+      "age": "18",
+      "region": "Navoi",
+      "regionId": "1",
+      "district": "Zarafshon",
+      "study": "13-maktab",
+      "status": true,
+      "phone": "+998934735299",
+      "email": "ali@gmail.com"
+    },
+    {
+      "id": "2",
+      "studentId": "222777",
+      "name": "Barotali",
+      "surname": "Barnoyev",
+      "groupId": "2",
+      "group": "Backend NodeJS N72",
+      "stackId": "2",
+      "age": "20",
+      "region": "Buxoro",
+      "regionId": "2",
+      "district": "Kogon shahar",
+      "study": "TATU academic",
+      "status": true,
+      "phone": "+998936858225",
+      "email": "barotali@gmail.com"
+    }
+  ],
+  "rooms": [
+    {
+      "id": "1",
+      "name": "Facebook"
+    },
+    {
+      "id": "2",
+      "name": "Tesla"
+    },
+    {
+      "id": "3",
+      "name": "Instagram"
+    },
+    {
+      "id": "4",
+      "name": "Osmondagi bolalar"
     }
   ]
 }

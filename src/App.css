@@ -90,3 +90,27 @@ a {
 .ant-input-outlined:focus-within {
   box-shadow: 0 0 0 2px #dead7633 !important;
 }
+
+
+.btn{
+  background: white !important;
+  border: 1px solid var(--color-main) !important;
+  color: #bc8e5b !important;
+}
+
+.btn:hover{
+  color: #bc8e5b !important;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background: #bc8e5b; 
+}
