@@ -6,8 +6,8 @@ import Students from "./Students/Students";
 import Teachers from "../Dashboard/Teachers";
 import StudentsCrud from "./Students/StudentsCrud";
 import StudentMore from "./Students/StudentMore";
-import TeachersCrud from "./teachersCrud";
-import TeachersMore from "./teachersMore";
+import TeachersCrud from "./TeachersCrud";
+import TeachersMore from "./TeachersMore";
 import GroupCrud from "./Group/GroupCrud";
 import SingleGroup from "./Group/SingleGroup";
 export {
